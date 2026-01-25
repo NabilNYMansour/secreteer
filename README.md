@@ -94,7 +94,7 @@ Use `pnpm dev` to run both simultaneously, or run them separately:
 
 ## License
 
-[Add your license here]
+MIT
 
 ## Author
 

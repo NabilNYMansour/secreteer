@@ -19,10 +19,10 @@ const MAIN_URL = "https://secreteer.com";
 const APP_DESCRIPTION = "Share a secret with a link that expires. No account required.";
 
 const description = APP_DESCRIPTION;
-const title = "JSONeer";
+const title = "SECRETeer";
 const author = "Nabil Mansour";
-const keywords = "JSONeer, JSON, sharing, platform, Nabil Mansour, free";
-const imageLink = `${MAIN_URL}/JSONeer.png`;
+const keywords = "SECRETeer, SECRETeer, sharing, platform, Nabil Mansour, free";
+const imageLink = `${MAIN_URL}/SECRETeer.png`;
 
 export const metadata: Metadata = {
   title: {

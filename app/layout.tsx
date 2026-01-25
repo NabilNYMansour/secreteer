@@ -15,7 +15,7 @@ const allianceNo2 = localFont({
   src: '../public/AllianceNo2.otf',
 })
 
-const MAIN_URL = "https://secreteer.com";
+const MAIN_URL = "https://secreteer.dev";
 const APP_DESCRIPTION = "Share a secret with a link that expires. No account required.";
 
 const description = APP_DESCRIPTION;

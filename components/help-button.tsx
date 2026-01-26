@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HelpCircle, Database, KeyRound, Shield, Link2 } from "lucide-react";
 import {
   HoverCard,
@@ -11,26 +11,6 @@ import { GITHUB_REPO_URL } from "@/lib/config";
 
 export function HelpButton() {
   const [open, setOpen] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse)");
-    const updateIsTouchDevice = () => setIsTouchDevice(mediaQuery.matches);
-
-    updateIsTouchDevice();
-
-    if (typeof mediaQuery.addEventListener === "function") {
-      mediaQuery.addEventListener("change", updateIsTouchDevice);
-      return () => mediaQuery.removeEventListener("change", updateIsTouchDevice);
-    }
-
-    mediaQuery.addListener(updateIsTouchDevice);
-    return () => mediaQuery.removeListener(updateIsTouchDevice);
-  }, []);
 
   return (
     <HoverCard open={open} onOpenChange={setOpen} openDelay={200}>
@@ -40,12 +20,7 @@ export function HelpButton() {
           className="p-2 rounded-full hover:bg-muted transition-colors"
           aria-label="How it works"
           aria-expanded={open}
-          onClick={() => {
-            if (!isTouchDevice) {
-              return;
-            }
-            setOpen((prevOpen) => !prevOpen);
-          }}
+          onClick={() => setOpen((prevOpen) => !prevOpen)}
         >
           <HelpCircle className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
         </button>

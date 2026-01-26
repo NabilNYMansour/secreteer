@@ -17,6 +17,7 @@ import { toast } from "sonner";
 import { Eye, Copy, Check, AlertTriangle } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
+import { Textarea } from "@/components/ui/textarea";
 
 type ViewState = "loading" | "confirm" | "viewing" | "burned" | "not_found";
 
@@ -179,9 +180,11 @@ export default function ViewSecretPage({
             <div className="relative">
               <ScrollArea className="h-[300px] bg-muted/50">
                 <div className="h-[300px]">
-                  <div className="p-3 font-mono text-sm whitespace-pre-wrap break-all border h-full">
-                    {decryptedSecret}
-                  </div>
+                  <Textarea
+                    value={decryptedSecret}
+                    className="resize-none min-h-[300px]"
+                    onChange={() => { }}
+                  />
                 </div>
               </ScrollArea>
               <div className="absolute top-2 right-2 flex gap-1">

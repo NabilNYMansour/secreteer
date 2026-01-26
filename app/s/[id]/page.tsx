@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Eye, EyeOff, Copy, Check, AlertTriangle } from "lucide-react";
+import { Eye, Copy, Check, AlertTriangle } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
 
@@ -179,7 +179,7 @@ export default function ViewSecretPage({
             <div className="relative">
               <ScrollArea className="h-[300px] bg-muted/50">
                 <div className="h-[300px]">
-                  <div className="p-3 font-mono text-sm whitespace-pre-wrap break-all min-h-[80px] border">
+                  <div className="p-3 font-mono text-sm whitespace-pre-wrap break-all border h-full">
                     {decryptedSecret}
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function ViewSecretPage({
                   onClick={copyToClipboard}
                   variant="ghost"
                   size="icon"
-                  className="h-7 w-7"
+                  className="h-7 w-7 bg-muted border"
                 >
                   {copied ? (
                     <Check className="w-4 h-4" />

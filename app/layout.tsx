@@ -71,7 +71,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ConvexClientProvider>
-            <div className="min-h-screen flex flex-col">
+            <div className="min-h-svh flex flex-col">
               <header className="py-2 px-4">
                 <div className="max-w-4xl mx-auto flex items-center justify-between">
                   <Link href="/">

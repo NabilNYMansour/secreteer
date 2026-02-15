@@ -102,6 +102,12 @@ export default function RootLayout({
               />
               <div className="pointer-events-none z-[-10] absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-background" />
 
+              <footer className="py-2 px-4">
+                <div className="max-w-4xl mx-auto flex items-center justify-center">
+                  <p className="text-muted-foreground text-xs">Made by <a href="https://nabilmansour.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Nabil Mansour</a></p>
+                </div>
+              </footer>
+
             </div>
             <Toaster position="bottom-center" />
           </ConvexClientProvider>
